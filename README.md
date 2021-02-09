@@ -1,47 +1,292 @@
-<div class="w-full mx-auto px-6 post-width" style=""><div class="relative mb-4 post-header xl:mb-8 z-40" style=""><h1 class="font-semibold leading-none lg:text-3xl mb-2 text-2xl xxl:text-4xl" style="">How to Install Anaconda on Ubuntu 20.04</h1><div class="dark:text-gray-300 font-medium text-gray-700 flex text-xs flex-col md:flex-row" style=""><div class="inline-flex flex-row"><p class="rounded-sm font-medium leading-normal text-xs" style=""><span style="">Posted&nbsp;</span><time class="" datetime="2020-06-18T21:31:39+01:00" style="">Jun 18, 2020</time></p><span class="inline-block mx-2">•</span><p style="">4 min read</p></div></div></div><div class="lg:flex"><div class="w-full lg:max-h-full lg:overflow-visible lg:static min-h-screen"><div class="flex"><div class="w-full pb-8" style=""><div class="flex flex-col xl:flex-relative xl:flex-row"><aside class="w-full block hidden sidebar2 xxl:block" id="sidebar2"><div class="w-full flex justify-center content-center"><div class="w-full relative"><ins class="block hidden adsbygoogle mx-autosidebar2-as xl:block" data-ad-client="ca-pub-9439755881064125" data-ad-format="horizontal,rectangle" data-ad-slot="4501323511" data-full-width-responsive="true"></ins></div></div><div class="w-full -mt-12 flex-col hidden justify-between pb-4 pt-12 sticky top-16 xl:flex"><div class="pb-2 bg-gray-100 dark:bg-gray-800 mb-6 p-4 overflow-auto table-of-contents toc"><p class="uppercase text-xs font-medium xxl:text-sm mb-3 text-gray-800 tracking-tight dark:text-gray-200">Contents</p><div class="relative overflow-hidden"><div class="lg:max-h-toc overflow-y-auto scrollbar-thumb-gray scrollbar-thumb-rounded scrollbar-track-gray-lighter scrollbar-w-2 scrolling-touch"><nav id="TableOfContents"><ul><li><a href="#installing-anaconda" class="">Installing Anaconda</a></li><li><a href="#updating-anaconda" class="">Updating Anaconda</a></li><li><a href="#uninstalling-anaconda" class="">Uninstalling Anaconda</a></li><li><a href="#conclusion" class="">Conclusion</a></li></ul></nav></div></div><div class="flex border-gray-200 dark:border-gray-800 border-t items-center justify-content mb-3 mr-2 pt-4 tracking-tight"><p class="uppercase text-xs font-medium xxl:text-sm mr-4">Share:</p><section class="w-full mx-auto"><nav class="flex flex-wrap"><a href="https://twitter.com/share?text=How%20to%20Install%20Anaconda%20on%20Ubuntu%2020.04&amp;url=https%3a%2f%2flinuxize.com%2fpost%2fhow-to-install-anaconda-on-ubuntu-20-04%2f" class="mr-3 h-6 w-6" rel="noopener" target="_blank"><svg aria-hidden="true" class="dark:text-gray-300 inline-block fill-current h-6 w-6 hover:text-blue-600 text-gray-600" role="img"><use xlink:href="/svg/sprite.svg#twitter"></use></svg> </a><a href="https://www.facebook.com/sharer/sharer.php?caption=How%20to%20Install%20Anaconda%20on%20Ubuntu%2020.04&amp;u=https%3a%2f%2flinuxize.com%2fpost%2fhow-to-install-anaconda-on-ubuntu-20-04%2f" class="mr-3 h-6 w-6" rel="noopener" target="_blank"><svg aria-hidden="true" class="dark:text-gray-300 inline-block fill-current h-6 w-6 hover:text-blue-600 text-gray-600" role="img"><use xlink:href="/svg/sprite.svg#facebook"></use></svg> </a><a href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2flinuxize.com%2fpost%2fhow-to-install-anaconda-on-ubuntu-20-04%2f&amp;media=https%3a%2f%2flinuxize.com%2fpost%2fhow-to-install-anaconda-on-ubuntu-20-04%2ffeatured.jpg&amp;description=How%20to%20Install%20Anaconda%20on%20Ubuntu%2020.04" class="mr-3 h-6 w-6" rel="noopener" target="_blank"><svg aria-hidden="true" class="dark:text-gray-300 inline-block fill-current h-6 w-6 hover:text-blue-600 text-gray-600" role="img"><use xlink:href="/svg/sprite.svg#pinterest"></use></svg> </a><a href="mailto:?subject=How%20to%20Install%20Anaconda%20on%20Ubuntu%2020.04&amp;body=Check%20out%20this%20article:%0A%0Ahttps%3a%2f%2flinuxize.com%2fpost%2fhow-to-install-anaconda-on-ubuntu-20-04%2f" class="h-6 w-6" rel="noopener" target="_blank"><svg aria-hidden="true" class="dark:text-gray-300 inline-block fill-current h-6 w-6 hover:text-blue-600 text-gray-600" role="img"><use xlink:href="/svg/sprite.svg#email"></use></svg></a></nav></section></div></div><div class="w-full flex justify-center content-center hidden" id="bs-a"><div class="w-full mb-6 relative"><div id="bsa-block"></div></div></div></div></aside><section class="w-full mx-auto lg:max-w-none lg:ml-0 lg:mr-auto lg:pr-6 md:max-w-2xl min-w-0 xl:mx-0 xxl:px-6" style=""><figure class="relative mb-6 -mx-6 lg:mx-0"><div class="w-full mx-auto my-0 block relative"><div class="block" style="padding-bottom:53%"></div><div class="w-full h-full absolute inset-0 m-auto bg-gray-100 overflow-hidden"><picture><source media="(max-width: 480px)" srcset="/post/how-to-install-anaconda-on-ubuntu-20-04/featured_hu6328222a1b257c0c0bce48b438541436_38258_480x0_resize_q75_lanczos.jpg"><source media="(min-width: 481px)" srcset="/post/how-to-install-anaconda-on-ubuntu-20-04/featured_hu6328222a1b257c0c0bce48b438541436_38258_768x0_resize_q75_lanczos.jpg"><img alt="How to Install Anaconda on Ubuntu 20.04" class="w-full h-full absolute inset-0 m-auto" src="/post/how-to-install-anaconda-on-ubuntu-20-04/featured_hu6328222a1b257c0c0bce48b438541436_38258_480x0_resize_q75_lanczos.jpg?ezimgfmt=ng%3Awebp%2Fngcb65%2Frs%3Adevice%2Frscb65-1" ezimgfmt="rs rscb65 src ng ngcb65" loading="eager" style=""></picture></div></div></figure><div class="markdown" style=""><p style=""><span id="ezoic-pub-ad-placeholder-167" class="ezoic-adpicker-ad" style=""></span><span style="display:block !important;float:none;line-height:0px;margin-bottom:15px !important;margin-left:0px !important;margin-right:0px !important;margin-top:15px !important;min-height:90px;min-width:728px;text-align:center !important;" class="ezoic-ad box-2 adtester-container adtester-container-167" data-ez-name="linuxize_com-box-2"><span id="div-gpt-ad-linuxize_com-box-2-0" ezaw="728" ezah="90" style="position:relative;z-index:0;display:inline-block;width:100%;max-width:1200px;margin-left:auto !important;margin-right:auto !important;min-height:90px;min-width:728px;" class="ezoic-ad ezoic-adl"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">eval(ez_write_tag([[728,90],'linuxize_com-box-2','ezslot_7',167,'0','0']));</script></span></span>Anaconda is a popular Python/R data science and machine learning platform, used for large-scale data processing, predictive analytics, and scientific computing.</p><p style="">Anaconda distribution ships with 250 open-source data packages, and more than 7,500 additional packages can be installed from the Anaconda repositories. It also includes the <code>conda</code> command-line tool and a desktop graphical user interface called Anaconda Navigator.<span id="ezoic-pub-ad-placeholder-158" class="ezoic-adpicker-ad"></span></p><p style="">This tutorial will walk you through the installation of Anaconda Python Distribution on Ubuntu 20.04.<span id="ezoic-pub-ad-placeholder-138" class="ezoic-adpicker-ad" style=""></span></p><h2 id="installing-anaconda">Installing Anaconda <a href="#installing-anaconda" class="headline-link" aria-hidden="true">#</a></h2><p style="">At the time of writing this article, the latest stable version of Anaconda is version 2020.02. Before downloading the installer script, visit the <a href="https://www.anaconda.com/products/individual" rel="noopener" target="_blank">Downloads page</a> and check if there is a new version of Anaconda for Python 3 available for download.</p><p>Complete the following steps to install Anaconda on Ubuntu 20.04:<span id="ezoic-pub-ad-placeholder-139" class="ezoic-adpicker-ad"></span><span style="display:block !important;float:none;line-height:0px;margin-bottom:24px !important;margin-left:0px !important;margin-right:0px !important;margin-top:24px !important;min-height:90px;min-width:728px;text-align:center !important;" class="ezoic-ad box-3 adtester-container adtester-container-139" data-ez-name="linuxize_com-box-3"><span id="div-gpt-ad-linuxize_com-box-3-0" ezaw="728" ezah="90" style="position:relative;z-index:0;display:inline-block;width:100%;max-width:1200px;margin-left:auto !important;margin-right:auto !important;min-height:90px;min-width:728px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">eval(ez_write_tag([[728,90],'linuxize_com-box-3','ezslot_2',139,'0','0']));</script></span></span></p><ol style=""><li><p>Anaconda Navigator is a QT-based GUI. If you are installing Anaconda on a desktop machine and you want to use the GUI application, install the following packages. Otherwise, skip this step.</p><pre class="terminal"><code class="terminal-line" prefix="$">sudo apt install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6</code></pre></li><li><p>Download the Anaconda installation script with your <a href="https://linuxize.com/post/how-to-install-google-chrome-web-browser-on-ubuntu-20-04/">web browser</a> or <a href="https://linuxize.com/post/wget-command-examples/"><code>wget</code></a> :</p><pre class="terminal"><code class="terminal-line" prefix="$">wget -P /tmp https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh</code></pre><p>The download may take some time depending on your connection speed.</p></li><li><p>This step is optional, but it is recommended to verify the data integrity of the script.</p><p>Use the <code>sha256sum</code> command to display the script checksum:</p><pre class="terminal"><code class="terminal-line" prefix="$">sha256sum /tmp/Anaconda3-2020.02-Linux-x86_64.sh</code></pre><p>The output should look like this:</p><pre><code class="language-output" data-lang="output" style="">2b9f088b2022edb474915d9f69a803d6449d5fdb4c303041f60ac4aefcc208bb  /tmp/Anaconda3-2020.02-Linux-x86_64.sh</code></pre><p>Make sure the hash printed from the command above matches the one available at the <a href="https://docs.anaconda.com/anaconda/install/hashes/lin-3-64/" rel="noopener" target="_blank">Anaconda with Python 3 on 64-bit Linux page</a> for your appropriate Anaconda version.</p><pre style=""><code class="language-url" data-lang="url">https://docs.anaconda.com/anaconda/install/hashes/Anaconda3-2020.02-Linux-x86_64.sh-hash/</code></pre><figure class="relative"><div class="w-full mx-auto my-0 block relative"><div class="block" style="padding-bottom:20.75928917609047%"></div><div class="w-full h-full absolute inset-0 m-auto bg-gray-100 overflow-hidden"><picture><source media="(max-width: 480px)" srcset="/post/how-to-install-anaconda-on-ubuntu-20-04/ubuntu-anaconda-installer-hash_hu5d87ed25ddc241930de3e7e07456ad60_49845_480x0_resize_q75_lanczos.jpg"><source media="(min-width: 481px)" srcset="/post/how-to-install-anaconda-on-ubuntu-20-04/ubuntu-anaconda-installer-hash_hu5d87ed25ddc241930de3e7e07456ad60_49845_768x0_resize_q75_lanczos.jpg"><img alt="Ubuntu Anaconda Installer Hash" class="w-full h-full absolute inset-0 m-auto ezlazyloaded" src="/post/how-to-install-anaconda-on-ubuntu-20-04/ubuntu-anaconda-installer-hash_hu5d87ed25ddc241930de3e7e07456ad60_49845_480x0_resize_q75_lanczos.jpg?ezimgfmt=rs:695x144/rscb65/ng:webp/ngcb65" loading="lazy" ezimgfmt="rs rscb65 src ng ngcb65" data-ezsrc="/post/how-to-install-anaconda-on-ubuntu-20-04/ubuntu-anaconda-installer-hash_hu5d87ed25ddc241930de3e7e07456ad60_49845_480x0_resize_q75_lanczos.jpg?ezimgfmt=rs:695x144/rscb65/ng:webp/ngcb65" ezoid="0.06589735553009035"></picture></div></div></figure></li><li style=""><p style="">Run the script to start the installation process:</p><pre class="terminal" style=""><code class="terminal-line" prefix="$" style="">bash /tmp/Anaconda3-2020.02-Linux-x86_64.sh</code></pre><p style="">You should see an output like the following:</p><pre style=""><code class="language-output" data-lang="output" style="">Welcome to Anaconda3 2020.02
+# How to Install Anaconda on Ubuntu 20.04
 
-In order to continue the installation process, please review the license
-agreement.
-Please, press ENTER to continue
-&gt;&gt;&gt; </code></pre><p style="">Press <code style="">ENTER</code> to continue. To scroll through the license, use the <code>ENTER</code> key. Once you’re done reviewing the license, you’ll be asked to approve the license terms:</p><pre style=""><code class="language-output" data-lang="output" style="">Do you approve the license terms? [yes|no]</code></pre><p>Type <code>yes</code> to accept the license, and you’ll be prompted to choose the installation location:</p><pre style=""><code class="language-output" data-lang="output" style="">Anaconda3 will now be installed into this location:
-/home/linuxize/anaconda3
+![](https://linuxize.com/post/how-to-install-anaconda-on-ubuntu-20-04/featured_hu6328222a1b257c0c0bce48b438541436_38258_768x0_resize_q75_lanczos.jpg)
 
-    - Press ENTER to confirm the location
-    - Press CTRL-C to abort the installation
-    - Or specify a different location below</code></pre><p style="">The default location should be fine for most users. Press <code>ENTER</code> to confirm the location.</p><p style="">The installation may take some time, and once completed, the script will ask you whether you want to run <code style="">conda init</code>. Type <code>yes</code>.</p><pre style=""><code class="language-output" data-lang="output" style="">Installation finished.
-Do you wish the installer to initialize Anaconda3
-by running conda init? [yes|no]</code></pre><p style="">This will add the command-line tool <code>conda</code> to your system’s <a href="https://linuxize.com/post/how-to-add-directory-to-path-in-linux/"><code>PATH</code></a> .</p><p style="">To activate the Anaconda installation, you can either close and re-open your shell or load the new <code>PATH</code> environment variable into the current shell session by typing:</p><pre class="terminal" style=""><code class="terminal-line" prefix="$" style="">source ~/.bashrc</code></pre><p style="">To verify the installation type <code>conda</code> in your terminal.</p></li></ol><p style="">That’s it! You have successfully installed Anaconda on your Ubuntu machine, and you can start using it.<span id="ezoic-pub-ad-placeholder-156" class="ezoic-adpicker-ad"></span><span style="display:block !important;float:none;line-height:0px;margin-bottom:24px !important;margin-left:0px !important;margin-right:0px !important;margin-top:24px !important;min-height:280px;min-width:336px;text-align:center !important;" class="ezoic-ad medrectangle-3 adtester-container adtester-container-156" data-ez-name="linuxize_com-medrectangle-3"><span id="div-gpt-ad-linuxize_com-medrectangle-3-0" ezaw="336" ezah="280" style="position:relative;z-index:0;display:inline-block;width:100%;max-width:1200px;margin-left:auto !important;margin-right:auto !important;min-height:280px;min-width:336px;" class="ezoic-ad ezoic-adl"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">eval(ez_write_tag([[336,280],'linuxize_com-medrectangle-3','ezslot_0',156,'0','0']));</script></span></span></p><p style=""><span id="ezoic-pub-ad-placeholder-159" class="ezoic-adpicker-ad" style=""></span>If you installed Anaconda on a Desktop system, open the Navigator GUI by entering <code>anaconda-navigator</code> in your terminal:<span id="ezoic-pub-ad-placeholder-140" class="ezoic-adpicker-ad" style=""></span></p><figure class="relative" style=""><div class="w-full mx-auto my-0 block relative"><div class="block" style="padding-bottom:70.1%"></div><div class="w-full h-full absolute inset-0 m-auto bg-gray-100 overflow-hidden"><picture><source media="(max-width: 480px)" srcset="/post/how-to-install-anaconda-on-ubuntu-20-04/ubuntu-anaconda-navigator_hu98b25b1da321487a3135754bcd20812a_134031_480x0_resize_q75_lanczos.jpg"><source media="(min-width: 481px)" srcset="/post/how-to-install-anaconda-on-ubuntu-20-04/ubuntu-anaconda-navigator_hu98b25b1da321487a3135754bcd20812a_134031_768x0_resize_q75_lanczos.jpg"><img alt="Ubuntu Anaconda Navigator" class="w-full h-full absolute inset-0 m-auto ezlazyloaded" src="/post/how-to-install-anaconda-on-ubuntu-20-04/ubuntu-anaconda-navigator_hu98b25b1da321487a3135754bcd20812a_134031_480x0_resize_q75_lanczos.jpg?ezimgfmt=rs:726x509/rscb65/ng:webp/ngcb65" loading="lazy" ezimgfmt="rs rscb65 src ng ngcb65" data-ezsrc="/post/how-to-install-anaconda-on-ubuntu-20-04/ubuntu-anaconda-navigator_hu98b25b1da321487a3135754bcd20812a_134031_480x0_resize_q75_lanczos.jpg?ezimgfmt=rs:726x509/rscb65/ng:webp/ngcb65" ezoid="0.7811691228867068" style=""></picture></div></div></figure><h2 id="updating-anaconda" style="">Updating Anaconda <a href="#updating-anaconda" class="headline-link" aria-hidden="true">#</a></h2><p style="">Updating the Anaconda is a pretty straight forward process. Open your terminal and enter:</p><pre class="terminal" style=""><code class="terminal-line" prefix="$" style="">conda update --all</code></pre><p style="">If there are updates, <code>conda</code> will display a list and prompt you to confirm the update:</p><pre style=""><code class="language-output" data-lang="output" style="">The following packages will be UPDATED:
+> This tutorial will walk you through the installation of Anaconda Python Distribution on Ubuntu 20.04. Anaconda is a popular Python/R data science and machine learning platform.
 
-  anaconda-navigator                          1.9.12-py37_0 --&gt; 1.9.12-py37_1
-  conda                                        4.8.2-py37_0 --&gt; 4.8.3-py37_0
-  conda-package-han~                   1.6.0-py37h7b6447c_0 --&gt; 1.6.1-py37h7b6447c_0
+Anaconda is a popular Python/R data science and machine learning platform, used for large-scale data processing, predictive analytics, and scientific computing.
 
+Anaconda distribution ships with 250 open-source data packages, and more than 7,500 additional packages can be installed from the Anaconda repositories. It also includes the `conda` command-line tool and a desktop graphical user interface called Anaconda Navigator.
 
-Proceed ([y]/n)? 
-</code></pre><p style="">It is a good idea to update your Anaconda installation regularly.</p><h2 id="uninstalling-anaconda" style="">Uninstalling Anaconda <a href="#uninstalling-anaconda" class="headline-link" aria-hidden="true">#</a></h2><p style="">If you want to uninstall Anaconda from your Ubuntu system, <a href="https://linuxize.com/post/rm-command-in-linux/">remove</a> the Anaconda installation directory and all other files that have been created during the installation:</p><pre class="terminal" style=""><code class="terminal-line" prefix="$" style="">rm -rf ~/anaconda3 ~/.condarc ~/.conda ~/.continuum</code></pre><p style="">Open the <a href="https://linuxize.com/post/bashrc-vs-bash-profile/"><code>~/.bashrc</code></a> file and remove the Anaconda directory from the <code>PATH</code> environment variable:<span id="ezoic-pub-ad-placeholder-142" class="ezoic-adpicker-ad" style=""></span><span style="display:block !important;float:none;line-height:0px;margin-bottom:24px !important;margin-left:0px !important;margin-right:0px !important;margin-top:24px !important;min-height:90px;min-width:728px;text-align:center !important;" class="ezoic-ad medrectangle-4 adtester-container adtester-container-142" data-ez-name="linuxize_com-medrectangle-4"><span id="div-gpt-ad-linuxize_com-medrectangle-4-0" ezaw="728" ezah="90" style="position:relative;z-index:0;display:inline-block;width:100%;max-width:1200px;margin-left:auto !important;margin-right:auto !important;min-height:90px;min-width:728px;" class="ezoic-ad ezoic-adl"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">eval(ez_write_tag([[728,90],'linuxize_com-medrectangle-4','ezslot_1',142,'0','0']));</script></span></span></p><div class="code-label" style="">~/.bashrc</div><div class="highlight"><pre class="chroma" style=""><code class="language-sh" data-lang="sh"><span class="c1"># &gt;&gt;&gt; conda initialize &gt;&gt;&gt;</span>
-<span class="c1" style=""># !! Contents within this block are managed by 'conda init' !!</span>
-<span class="nv">__conda_setup</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span><span class="s1" style="">'/home/linuxize/anaconda3/bin/conda'</span> <span class="s1">'shell.bash'</span> <span class="s1">'hook'</span> 2&gt; /dev/null<span class="k">)</span><span class="s2">"</span>
-<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-    <span class="nb">eval</span> <span class="s2">"</span><span class="nv">$__conda_setup</span><span class="s2">"</span>
-<span class="k">else</span>
-    <span class="k">if</span> <span class="o">[</span> -f <span class="s2" style="">"/home/linuxize/anaconda3/etc/profile.d/conda.sh"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-        . <span class="s2" style="">"/home/linuxize/anaconda3/etc/profile.d/conda.sh"</span>
-    <span class="k">else</span>
-        <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2" style="">"/home/linuxize/anaconda3/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
-    <span class="k">fi</span>
-<span class="k">fi</span>
-<span class="nb">unset</span> __conda_setup
-<span class="c1" style=""># &lt;&lt;&lt; conda initialize &lt;&lt;&lt;</span></code></pre><span class="code-copy button main small" data-clipboard-text="# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup=&quot;$('/home/linuxize/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)&quot;
-if [ $? -eq 0 ]; then
-    eval &quot;$__conda_setup&quot;
-else
-    if [ -f &quot;/home/linuxize/anaconda3/etc/profile.d/conda.sh&quot; ]; then
-        . &quot;/home/linuxize/anaconda3/etc/profile.d/conda.sh&quot;
+This tutorial will walk you through the installation of Anaconda Python Distribution on Ubuntu 20.04.
+
+Installing Anaconda
+-------------------
+
+At the time of writing this article, the latest stable version of Anaconda is version 2020.02. Before downloading the installer script, visit the [Downloads page](https://www.anaconda.com/products/individual) and check if there is a new version of Anaconda for Python 3 available for download.
+
+Complete the following steps to install Anaconda on Ubuntu 20.04:
+
+1.  Anaconda Navigator is a QT-based GUI. If you are installing Anaconda on a desktop machine and you want to use the GUI application, install the following packages. Otherwise, skip this step.
+    
+        sudo apt install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+    
+2.  Download the Anaconda installation script with your [web browser](https://linuxize.com/post/how-to-install-google-chrome-web-browser-on-ubuntu-20-04/) or [`wget`](https://linuxize.com/post/wget-command-examples/) :
+    
+        wget -P /tmp https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
+    
+    The download may take some time depending on your connection speed.
+    
+3.  This step is optional, but it is recommended to verify the data integrity of the script.
+    
+    Use the `sha256sum` command to display the script checksum:
+    
+        sha256sum /tmp/Anaconda3-2020.02-Linux-x86_64.sh
+    
+    The output should look like this:
+    
+        2b9f088b2022edb474915d9f69a803d6449d5fdb4c303041f60ac4aefcc208bb  /tmp/Anaconda3-2020.02-Linux-x86_64.sh
+    
+    Make sure the hash printed from the command above matches the one available at the [Anaconda with Python 3 on 64-bit Linux page](https://docs.anaconda.com/anaconda/install/hashes/lin-3-64/) for your appropriate Anaconda version.
+    
+        https://docs.anaconda.com/anaconda/install/hashes/Anaconda3-2020.02-Linux-x86_64.sh-hash/
+    
+4.  Run the script to start the installation process:
+    
+        bash /tmp/Anaconda3-2020.02-Linux-x86_64.sh
+    
+    You should see an output like the following:
+    
+        Welcome to Anaconda3 2020.02
+        
+        In order to continue the installation process, please review the license
+        agreement.
+        Please, press ENTER to continue
+        >>> 
+    
+    Press `ENTER` to continue. To scroll through the license, use the `ENTER` key. Once you’re done reviewing the license, you’ll be asked to approve the license terms:
+    
+        Do you approve the license terms? [yes|no]
+    
+    Type `yes` to accept the license, and you’ll be prompted to choose the installation location:
+    
+        Anaconda3 will now be installed into this location:
+        /home/linuxize/anaconda3
+        
+            - Press ENTER to confirm the location
+            - Press CTRL-C to abort the installation
+            - Or specify a different location below
+    
+    The default location should be fine for most users. Press `ENTER` to confirm the location.
+    
+    The installation may take some time, and once completed, the script will ask you whether you want to run `conda init`. Type `yes`.
+    
+        Installation finished.
+        Do you wish the installer to initialize Anaconda3
+        by running conda init? [yes|no]
+    
+    This will add the command-line tool `conda` to your system’s [`PATH`](https://linuxize.com/post/how-to-add-directory-to-path-in-linux/) .
+    
+    To activate the Anaconda installation, you can either close and re-open your shell or load the new `PATH` environment variable into the current shell session by typing:
+    
+        source ~/.bashrc
+    
+    To verify the installation type `conda` in your terminal.
+    
+
+That’s it! You have successfully installed Anaconda on your Ubuntu machine, and you can start using it.
+
+If you installed Anaconda on a Desktop system, open the Navigator GUI by entering `anaconda-navigator` in your terminal:
+
+Updating Anaconda
+-----------------
+
+Updating the Anaconda is a pretty straight forward process. Open your terminal and enter:
+
+    conda update --all
+
+If there are updates, `conda` will display a list and prompt you to confirm the update:
+
+    The following packages will be UPDATED:
+    
+      anaconda-navigator                          1.9.12-py37_0 --> 1.9.12-py37_1
+      conda                                        4.8.2-py37_0 --> 4.8.3-py37_0
+      conda-package-han~                   1.6.0-py37h7b6447c_0 --> 1.6.1-py37h7b6447c_0
+    
+    
+    Proceed ([y]/n)? 
+    
+
+It is a good idea to update your Anaconda installation regularly.
+
+Uninstalling Anaconda
+---------------------
+
+If you want to uninstall Anaconda from your Ubuntu system, [remove](https://linuxize.com/post/rm-command-in-linux/) the Anaconda installation directory and all other files that have been created during the installation:
+
+    rm -rf ~/anaconda3 ~/.condarc ~/.conda ~/.continuum
+
+Open the [`~/.bashrc`](https://linuxize.com/post/bashrc-vs-bash-profile/) file and remove the Anaconda directory from the `PATH` environment variable:
+
+~/.bashrc
+
+    # >>> conda initialize >>>
+    # !! Contents within this block are managed by 'conda init' !!
+    __conda_setup="$('/home/linuxize/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__conda_setup"
     else
-        export PATH=&quot;/home/linuxize/anaconda3/bin:$PATH&quot;
+        if [ -f "/home/linuxize/anaconda3/etc/profile.d/conda.sh" ]; then
+            . "/home/linuxize/anaconda3/etc/profile.d/conda.sh"
+        else
+            export PATH="/home/linuxize/anaconda3/bin:$PATH"
+        fi
     fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<">Copy</span></div><h2 id="conclusion" style="">Conclusion <a href="#conclusion" class="headline-link" aria-hidden="true">#</a></h2><p style="">We’ve shown you how to install Anaconda on Ubuntu 20.04. You should now check the official <a href="https://conda.io/docs/user-guide/getting-started.html" rel="noopener" target="_blank">Getting started with conda</a> guide.<span id="ezoic-pub-ad-placeholder-160" class="ezoic-adpicker-ad" style=""></span></p><p style="">If you hit a problem or have feedback, leave a comment below.</p><div class="flex flex-wrap my-8" style=""><a href="/tags/ubuntu/" class="text-sm font-medium tracking-wide bg-indigo-700 hover:bg-indigo-800 mr-2 mt-2 px-4 py-2 rounded text-white">ubuntu</a> <a href="/tags/anaconda/" class="text-sm font-medium tracking-wide bg-indigo-700 hover:bg-indigo-800 mr-2 mt-2 px-4 py-2 rounded text-white">anaconda</a></div></div></section></div><span id="ezoic-pub-ad-placeholder-102" class="ezoic-adpicker-ad"></span><span style="background:0 0 !important;display:flex !important;float:right !important;justify-content:space-between;line-height:0px;margin-bottom:24px !important;margin-left:auto !important;margin-right:auto !important;margin-top:24px !important;min-height:250px;min-width:970px;text-align:center !important;width:970px;" class="ezoic-ad medrectangle-1 adtester-container adtester-container-102 ezoic-ad-adaptive" data-ez-name="linuxize_com-medrectangle-1"><span style="border:none !important;display:block !important;float:right !important;line-height:0px;margin-bottom:24px !important;margin-left:0px !important;margin-right:0px !important;margin-top:24px !important;min-height:250px;min-width:300px;text-align:center !important;" class="ezoic-ad medrectangle-1 adtester-container adtester-container-102" data-ez-name="linuxize_com-medrectangle-1"><span id="div-gpt-ad-linuxize_com-medrectangle-1-0" ezaw="323" ezah="250" style="position:relative;z-index:0;display:inline-block;min-height:250px;min-width:323px;" class="ezoic-ad ezoic-adl"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">eval(ez_write_tag([[300,250],'linuxize_com-medrectangle-1','ezslot_8',102,'0','0']));</script></span></span><span style="border:none !important;display:block !important;float:right !important;line-height:0px;margin-bottom:24px !important;margin-left:0px !important;margin-right:0px !important;margin-top:24px !important;min-height:250px;min-width:300px;text-align:center !important;" class="ezoic-ad medrectangle-1 adtester-container adtester-container-102" data-ez-name="linuxize_com-medrectangle-1"><span id="div-gpt-ad-linuxize_com-medrectangle-1-0_1" ezaw="323" ezah="250" style="position:relative;z-index:0;display:inline-block;min-height:250px;min-width:323px;" class="ezoic-ad ezoic-adl"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">eval(ez_write_tag([[300,250],'linuxize_com-medrectangle-1','ezslot_9',102,'0','1']));</script></span></span><span style="border:none !important;display:block !important;float:right !important;line-height:0px;margin-bottom:24px !important;margin-left:0px !important;margin-right:0px !important;margin-top:24px !important;min-height:250px;min-width:300px;text-align:center !important;" class="ezoic-ad medrectangle-1 adtester-container adtester-container-102" data-ez-name="linuxize_com-medrectangle-1"><span id="div-gpt-ad-linuxize_com-medrectangle-1-0_2" ezaw="323" ezah="250" style="position:relative;z-index:0;display:inline-block;min-height:250px;min-width:323px;" class="ezoic-ad ezoic-adl"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">eval(ez_write_tag([[300,250],'linuxize_com-medrectangle-1','ezslot_10',102,'0','2']));</script></span></span></span></div></div></div><div class="w-full absolute hidden -mb-16 flex-grow lg:-mb-0 lg:block lg:pt-0 lg:static sidebar top-16 z-40" id="sidebar" style="height: 5544px;"><span id="ezoic-pub-ad-placeholder-126" class="ezoic-adpicker-ad"></span><span style="background:0 0 !important;display:block !important;float:none;line-height:0px;margin-left:auto !important;margin-right:auto !important;min-height:1050px;min-width:300px;text-align:center !important;width:300px;" class="ezoic-ad box-1 adtester-container adtester-container-126 ezoic-ad-adaptive" data-ez-name="linuxize_com-box-1"><span style="border:none !important;display:block !important;float:none;line-height:0px;margin-bottom:6px !important;margin-left:0px !important;margin-right:0px !important;margin-top:0 !important;min-height:250px;min-width:300px;text-align:center !important;" class="ezoic-ad box-1 adtester-container adtester-container-126" data-ez-name="linuxize_com-box-1"><span id="div-gpt-ad-linuxize_com-box-1-0" ezaw="300" ezah="262" style="position:relative;z-index:0;display:inline-block;min-height:262px;min-width:300px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">eval(ez_write_tag([[300,250],'linuxize_com-box-1','ezslot_3',126,'0','0']));</script></span></span><span style="border:none !important;display:block !important;float:none;line-height:0px;margin-bottom:6px !important;margin-left:0px !important;margin-right:0px !important;margin-top:0 !important;min-height:250px;min-width:300px;text-align:center !important;" class="ezoic-ad box-1 adtester-container adtester-container-126" data-ez-name="linuxize_com-box-1"><span id="div-gpt-ad-linuxize_com-box-1-0_1" ezaw="300" ezah="262" style="position:relative;z-index:0;display:inline-block;min-height:262px;min-width:300px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">eval(ez_write_tag([[300,250],'linuxize_com-box-1','ezslot_4',126,'0','1']));</script></span></span><span style="border:none !important;display:block !important;float:none;line-height:0px;margin-bottom:6px !important;margin-left:0px !important;margin-right:0px !important;margin-top:0 !important;min-height:250px;min-width:300px;text-align:center !important;" class="ezoic-ad box-1 adtester-container adtester-container-126" data-ez-name="linuxize_com-box-1"><span id="div-gpt-ad-linuxize_com-box-1-0_2" ezaw="300" ezah="262" style="position:relative;z-index:0;display:inline-block;min-height:262px;min-width:300px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">eval(ez_write_tag([[300,250],'linuxize_com-box-1','ezslot_5',126,'0','2']));</script></span></span><span style="border:none !important;display:block !important;float:none;line-height:0px;margin-bottom:6px !important;margin-left:0px !important;margin-right:0px !important;margin-top:0 !important;min-height:250px;min-width:300px;text-align:center !important;" class="ezoic-ad box-1 adtester-container adtester-container-126" data-ez-name="linuxize_com-box-1"><span id="div-gpt-ad-linuxize_com-box-1-0_3" ezaw="300" ezah="262" style="position:relative;z-index:0;display:inline-block;min-height:262px;min-width:300px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">eval(ez_write_tag([[300,250],'linuxize_com-box-1','ezslot_6',126,'0','3']));</script></span></span></span><div class="relative mb-6 wrap-collabsible"><input class="hidden toggle" type="checkbox" id="collapsible"> <label class="flex items-center block bg-indigo-700 cursor-pointer hover:bg-indigo-800 justify-between lbl-toggle px-4 py-2 relative text-white" for="collapsible" style=""><span class="block font-medium text-sm tracking-wide" style=""><span style="">Not using Ubuntu 20.04?</span><br><span>Choose different OS:</span> </span><span class="block ml-3"><svg aria-hidden="true" class="inline-block fill-current icon h-5 w-5 white" role="img"><use xlink:href="/svg/sprite.svg#select"></use></svg></span></label><div class="z-50 absolute collapsible-content shadow-lg"><div class="w-full dark:bg-gray-800 bg-white distro-versions flex-wrap inline-flex items-center pt-2 ring-1 ring-black ring-opacity-5 rounded-md" aria-labelledby="options-menu" aria-orientation="vertical" role="menu"><div class="w-full px-4 mb-2 pb-2"><a href="/post/how-to-install-anaconda-on-centos-7/" class="w-full flex block capitalize dark-hover:text-gray-100 dark:text-gray-300 font-medium hover:text-gray-900 leading-normal text-gray-700 text-xs xxl:text-sm"><span class="mr-2"><svg aria-hidden="true" class="inline-block fill-current icon h-3 w-3" role="img"><use xlink:href="/svg/sprite.svg#link"></use></svg> </span><span>centos 7</span></a></div><div class="w-full px-4 mb-2 pb-2"><a href="/post/how-to-install-anaconda-on-centos-8/" class="w-full flex block capitalize dark-hover:text-gray-100 dark:text-gray-300 font-medium hover:text-gray-900 leading-normal text-gray-700 text-xs xxl:text-sm"><span class="mr-2"><svg aria-hidden="true" class="inline-block fill-current icon h-3 w-3" role="img"><use xlink:href="/svg/sprite.svg#link"></use></svg> </span><span>centos 8</span></a></div><div class="w-full px-4 mb-2 pb-2"><a href="/post/how-to-install-anaconda-on-debian-10/" class="w-full flex block capitalize dark-hover:text-gray-100 dark:text-gray-300 font-medium hover:text-gray-900 leading-normal text-gray-700 text-xs xxl:text-sm"><span class="mr-2"><svg aria-hidden="true" class="inline-block fill-current icon h-3 w-3" role="img"><use xlink:href="/svg/sprite.svg#link"></use></svg> </span><span>debian 10</span></a></div><div class="w-full px-4 mb-2 pb-2"><a href="/post/how-to-install-anaconda-on-ubuntu-18-04/" class="w-full flex block capitalize dark-hover:text-gray-100 dark:text-gray-300 font-medium hover:text-gray-900 leading-normal text-gray-700 text-xs xxl:text-sm"><span class="mr-2"><svg aria-hidden="true" class="inline-block fill-current icon h-3 w-3" role="img"><use xlink:href="/svg/sprite.svg#link"></use></svg> </span><span>ubuntu 18.04</span></a></div></div></div></div><div class="pb-2 bg-gray-100 dark:bg-gray-800 mb-6 p-4 related-content" style=""><p class="dark:text-gray-300 font-medium text-xs xxl:text-sm mb-3 text-gray-800 tracking-tight uppercase" style="">Related Tutorials</p><ul class="mt-4 border-gray-200 border-t dark:border-gray-800 mb-0 pt-3"><li class="flex border-gray-200 dark:border-gray-800 border-b mb-2 pb-2"><a href="https://linuxize.com/post/how-to-install-anaconda-on-ubuntu-18-04/" class="dark:text-gray-300 dark-hover:text-gray-100 hover:text-gray-900 font-medium text-gray-700 text-sm">How to Install Anaconda on Ubuntu 18.04</a></li><li class="flex border-gray-200 dark:border-gray-800 border-b mb-2 pb-2"><a href="https://linuxize.com/post/how-to-install-php-8-on-ubuntu-20-04/" class="dark:text-gray-300 dark-hover:text-gray-100 hover:text-gray-900 font-medium text-gray-700 text-sm">How to Install PHP 8 on Ubuntu 20.04</a></li><li class="flex border-gray-200 dark:border-gray-800 border-b mb-2 pb-2"><a href="https://linuxize.com/post/how-to-install-flask-on-ubuntu-20-04/" class="dark:text-gray-300 dark-hover:text-gray-100 hover:text-gray-900 font-medium text-gray-700 text-sm">How to Install Flask on Ubuntu 20.04</a></li><li class="flex border-gray-200 dark:border-gray-800 border-b mb-2 pb-2"><a href="https://linuxize.com/post/how-to-install-python-3-9-on-ubuntu-20-04/" class="dark:text-gray-300 dark-hover:text-gray-100 hover:text-gray-900 font-medium text-gray-700 text-sm">How to Install Python 3.9 on Ubuntu 20.04</a></li><li class="flex border-gray-200 dark:border-gray-800 border-b mb-2 pb-2"><a href="https://linuxize.com/post/how-to-nvidia-drivers-on-ubuntu-20-04/" class="dark:text-gray-300 dark-hover:text-gray-100 hover:text-gray-900 font-medium text-gray-700 text-sm">How to Install Nvidia Drivers on Ubuntu 20.04</a></li><li class="flex border-gray-200 dark:border-gray-800 border-b mb-2 pb-2"><a href="https://linuxize.com/post/how-to-set-up-wireguard-vpn-on-ubuntu-20-04/" class="dark:text-gray-300 dark-hover:text-gray-100 hover:text-gray-900 font-medium text-gray-700 text-sm">How to Set Up WireGuard VPN on Ubuntu 20.04</a></li><li class="flex border-gray-200 dark:border-gray-800 border-b mb-2 pb-2"><a href="https://linuxize.com/post/how-to-install-and-configure-squid-proxy-on-ubuntu-20-04/" class="dark:text-gray-300 dark-hover:text-gray-100 hover:text-gray-900 font-medium text-gray-700 text-sm">How to Install and Configure Squid Proxy on Ubuntu 20.04</a></li></ul></div><div class="flex flex-col -mt-12 lg:block lg:relative lg:sticky lg:top-16 pt-12" style=""><div class="sideblock"><div class="hidden affiliate mb-5" id="server-hunter"></div><div class="hidden affiliate" id="vultr"></div><div class="w-full flex justify-center content-center"><div class="w-full relative"><ins class="block mx-auto adsbygoogle" data-ad-client="ca-pub-9439755881064125" data-ad-format="auto" data-ad-slot="7027266996" data-full-width-responsive="true"></ins></div></div></div></div><span id="ezoic-pub-ad-placeholder-105" class="ezoic-adpicker-ad"></span><span style="display:block !important;float:none;line-height:0px;margin-bottom:24px !important;margin-left:0px !important;margin-right:0px !important;margin-top:0px !important;min-height:250px;min-width:300px;text-align:center !important;" class="ezoic-ad banner-2 adtester-container adtester-container-105 ez-sticky" data-ez-name="linuxize_com-banner-2"><span id="div-gpt-ad-linuxize_com-banner-2-0" ezaw="300" ezah="250" style="position:relative;z-index:0;display:inline-block;min-height:250px;min-width:300px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">eval(ez_write_tag([[300,250],'linuxize_com-banner-2','ezslot_11',105,'0','0']));</script></span><span style="width:300px;display:block;height:14px;margin:auto" class="reportline"><span style="text-align:center;font-size: smaller;float:left;line-height:normal;"><a href="https://www.ezoic.com/what-is-ezoic/" target="_blank" rel="noopener noreferrer nofollow" style="cursor:pointer"><img src="https://linuxize.com/ezoimgfmt/go.ezoic.net/utilcave_com/img/ezoic.png?ezimgfmt=rs:62x16/rscb65/ng:webp/ngcb65" alt="Ezoic" style="height:12px !important; padding:2px !important; border:0px !important; cursor:pointer !important; width: 58px !important; margin:0 !important; box-sizing: content-box !important;" ezimgfmt="rs rscb65 src ng ngcb65" class=" ezlazyloaded" data-ezsrc="https://linuxize.com/ezoimgfmt/go.ezoic.net/utilcave_com/img/ezoic.png?ezimgfmt=rs:62x16/rscb65/ng:webp/ngcb65" ezoid="0.6043018864418546"></a></span><span class="ez-report-ad-button" name="?pageview_id=eeb360ec-c693-4dc6-4ada-69a5599cb1e8&amp;ad_position_id=105&amp;impression_group_id=linuxize_com-banner-2/2021-02-09/1249019&amp;ad_size=300x250&amp;domain_id=93605&amp;url=https://linuxize.com/post/how-to-install-anaconda-on-ubuntu-20-04/" style="cursor: pointer!important; font-size:12px !important;color: #a5a5a5 ;float:right;text-decoration:none !important;font-family:arial !important;line-height:normal;">report this ad</span></span></span></div></div></div>
+    unset __conda_setup
+    # <<< conda initialize <<<
+
+Conclusion
+----------
+
+We’ve shown you how to install Anaconda on Ubuntu 20.04. You should now check the official [Getting started with conda](https://conda.io/docs/user-guide/getting-started.html) guide.
+
+If you hit a problem or have feedback, leave a comment below.
+
+
+[Source](https://linuxize.com/post/how-to-install-anaconda-on-ubuntu-20-04/)
+
+
+
+# Part 2.0
+
+# How To Install PostgreSQL on Ubuntu 20.04 [Quickstart] | DigitalOcean
+
+![](https://community-cdn-digitalocean-com.global.ssl.fastly.net/variants/pjJLrrJc5CfvMF19m9GaShsD/035575f2985fe451d86e717d73691e533a1a00545d7230900ed786341dc3c882)
+
+> PostgreSQL, or Postgres, is a relational database management system that provides an implementation of the SQL querying language. This quickstart guide demonstrates how to install Postgres on an Ubuntu 20.04 server. It also provides instructions for g
+
+### Introduction
+
+[PostgreSQL](https://www.postgresql.org/), or Postgres, is a relational database management system that provides an implementation of the [SQL](https://en.wikipedia.org/wiki/SQL) querying language. It’s standards-compliant and has many advanced features like reliable transactions and concurrency without read locks.
+
+This guide demonstrates how to quickly get Postgres up and running on an Ubuntu 20.04 server, from installing PostgreSQL to setting up a new user and database. If you’d prefer a more in-depth tutorial on installing and managing a PostgreSQL database, see [How To Install and Use PostgreSQL on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-20-04).
+
+Prerequisites
+-------------
+
+To follow along with this tutorial, you will need one Ubuntu 20.04 server that has been configured by following our [Initial Server Setup for Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04) guide. After completing this prerequisite tutorial, your server should have a non-**root** user with sudo permissions and a basic firewall.
+
+Step 1 — Installing PostgreSQL
+------------------------------
+
+To install PostgreSQL, first refresh your server’s local package index:
+
+Then, install the Postgres package along with a `-contrib` package that adds some additional utilities and functionality:
+
+Step 2 — Using PostgreSQL Roles and Databases
+---------------------------------------------
+
+By default, Postgres uses a concept called “roles” to handle authentication and authorization. These are, in some ways, similar to regular Unix-style users and groups.
+
+Upon installation, Postgres is set up to use _ident_ authentication, meaning that it associates Postgres roles with a matching Unix/Linux system account. If a role exists within Postgres, a Unix/Linux username with the same name is able to sign in as that role.
+
+The installation procedure created a user account called **postgres** that is associated with the default Postgres role. There are a few ways to utilize this account to access Postgres. One way is to switch over to the **postgres** account on your server by typing:
+
+Then you can access the Postgres prompt by typing:
+
+This will log you into the PostgreSQL prompt, and from here you are free to interact with the database management system right away.
+
+To exit out of the PostgreSQL prompt, run the following:
+
+This will bring you back to the **postgres** Linux command prompt. To return to your regular system user, run the `exit` command:
+
+Another way to connect to the Postgres prompt is to run the `psql` command as the **postgres** account directly with `sudo`:
+
+This will log you directly into Postgres without the intermediary `bash` shell in between.
+
+Again, you can exit the interactive Postgres session by typing:
+
+Step 3 — Creating a New Role
+----------------------------
+
+If you are logged in as the **postgres** account, you can create a new role by typing:
+
+If, instead, you prefer to use `sudo` for each command without switching from your normal account, type:
+
+Either way, the script will prompt you with some choices and, based on your responses, execute the correct Postgres commands to create a user to your specifications.
+
+    OutputEnter name of role to add: sammy
+    Shall the new role be a superuser? (y/n) y
+    
+
+Step 4 — Creating a New Database
+--------------------------------
+
+Another assumption that the Postgres authentication system makes by default is that for any role used to log in, that role will have a database with the same name which it can access.
+
+This means that if the user you created in the last section is called **sammy**, that role will attempt to connect to a database which is also called “sammy” by default. You can create the appropriate database with the `createdb` command.
+
+If you are logged in as the **postgres** account, you would type something like:
+
+If, instead, you prefer to use `sudo` for each command without switching from your normal account, you would type:
+
+Step 5 — Opening a Postgres Prompt with the New Role
+----------------------------------------------------
+
+To log in with `ident` based authentication, you’ll need a Linux user with the same name as your Postgres role and database.
+
+If you don’t have a matching Linux user available, you can create one with the `adduser` command. You will have to do this from your non-**root** account with `sudo` privileges (meaning, not logged in as the **postgres** user):
+
+Once this new account is available, you can either switch over and connect to the database by typing:
+
+Or, you can do this inline:
+
+This command will log you in automatically, assuming that all of the components have been properly configured.
+
+If you want your user to connect to a different database, you can do so by specifying the database like this:
+
+Once logged in, you can get check your current connection information by typing:
+
+    OutputYou are connected to database "sammy" as user "sammy" via socket in "/var/run/postgresql" at port "5432".
+    
+
+Conclusion
+----------
+
+You are now set up with PostgreSQL on your Ubuntu 20.04 server. If you’d like to learn more about Postgres and how to use it, we encourage you to check out the following guides:
+
+*   [A comparison of relational database management systems](https://www.digitalocean.com/community/tutorials/sqlite-vs-mysql-vs-postgresql-a-comparison-of-relational-database-management-systems)
+*   [Practice running queries with SQL](https://www.digitalocean.com/community/tutorials/introduction-to-queries-postgresql)
+
+
+[Source](https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-20-04-quickstart)
+
+
+
+# peteralexandercharles/git
+
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9oB6jmPaiNkrASSSnNGoJPAs4CRLtRFA7pQ&usqp=CAU)
+
+> Contribute to peteralexandercharles/git development by creating an account on GitHub.
+
+### …or create a new repository on the command line
+
+echo "# git" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/peteralexandercharles/git.git
+git push -u origin master
+
+### …or push an existing repository from the command line
+
+git remote add origin https://github.com/peteralexandercharles/git.git
+git branch -M master
+git push -u origin master
+
+### …or import code from another repository
+
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+[Import code](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/peteralexandercharles/git/import)
+
+**ProTip!** Use the URL for this page when adding GitHub as a remote.
+
+
+[Source](https://github.com/peteralexandercharles/git)
+
+
+
+
+
