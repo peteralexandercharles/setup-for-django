@@ -151,7 +151,7 @@ If you hit a problem or have feedback, leave a comment below.
 
 # How To Install PostgreSQL on Ubuntu 20.04 [Quickstart] | DigitalOcean
 
-![](https://community-cdn-digitalocean-com.global.ssl.fastly.net/variants/pjJLrrJc5CfvMF19m9GaShsD/035575f2985fe451d86e717d73691e533a1a00545d7230900ed786341dc3c882)
+![](https://www.quest.com/community/cfs-filesystemfile/__key/communityserver-components-secureimagefileviewer/communityserver-blogs-components-weblogfiles-00-00-00-00-39/Slide2.JPG_2D00_1100x500x2.jpg?_=637219525519183603)
 
 > PostgreSQL, or Postgres, is a relational database management system that provides an implementation of the SQL querying language. This quickstart guide demonstrates how to install Postgres on an Ubuntu 20.04 server. It also provides instructions for g
 
