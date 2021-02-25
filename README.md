@@ -109,6 +109,17 @@ If there are updates, `conda` will display a list and prompt you to confirm the 
 
 It is a good idea to update your Anaconda installation regularly.
 
+If you have some trouble erro like:
+
+```bash
+Cannot find command
+```
+
+then troubleshoot:
+	export PATH=~/anaconda3/bin:$PATH
+
+
+
 Uninstalling Anaconda
 ---------------------
 
