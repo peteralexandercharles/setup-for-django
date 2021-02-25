@@ -189,6 +189,10 @@ Then, install the Postgres package along with a `-contrib` package that adds som
 	
 	sudo apt install postgresql postgresql-contrib
 
+Then start PostgreSQL:
+	
+	sudo service postgresql start
+
 Step 2 — Using PostgreSQL Roles and Databases
 ---------------------------------------------
 
