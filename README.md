@@ -116,7 +116,8 @@ Cannot find command
 ```
 
 then troubleshoot:
-	export PATH=~/anaconda3/bin:$PATH
+
+    export PATH=~/anaconda3/bin:$PATH
 
 
 
